@@ -34,7 +34,7 @@ const Player = () => {
         const frontvector = new Vector3(0, 0, (moveBackward ? 1 : 0) - (moveForward ? 1 : 0))
         const sideVector = new Vector3((moveLeft ? 1 : 0) - (moveRight ? 1 : 0), 0, 0);
 
-        direction.subVector(frontvector, sideVector).normalize().multiplyScalar(SPEED).applyEuler(camera.rotation);
+        direction.subVectors(frontvector, sideVector).normalize().multiplyScalar(SPEED).applyEuler(camera.rotation);
 
         api.velocity.set(direction.x, vel.current[1], direction.z);
 
