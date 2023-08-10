@@ -54,3 +54,16 @@ body {
 .cursor {
   color: white;
 }
+
+.texture-selector {
+  transform: scale(5);
+}
+
+img.active {
+  border: 2px solid red;
+}
+
+.menu {
+  top: 10px;
+  left: 10px;
+}
